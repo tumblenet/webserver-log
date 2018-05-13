@@ -1,13 +1,17 @@
-const fs = require('fs');
-var util = require('util');
-var log_file = fs.createWriteStream(__dirname + '/log.html', {flags : 'w'});
-var log_stdout = process.stdout;
+if(!global.tnlogger){
+  global.tnlogger = true;
 
-var oldLog = console.log;
+  const fs = require('fs');
+  var util = require('util');
+  var log_file = fs.createWriteStream(__dirname + '/log.html', {flags : 'w'});
+  var log_stdout = process.stdout;
 
-console.log = function (s) {
-  //oldLog(s);
+  var oldLog = console.log;
 
-  log_file.write(util.format(s) + '\n');
-  log_stdout.write(util.format(s) + '\n');
+  console.log = function (s) {
+    //oldLog(s);
+
+    log_file.write(util.format(s) + '\n');
+    log_stdout.write(util.format(s) + '\n');
+  }
 }
