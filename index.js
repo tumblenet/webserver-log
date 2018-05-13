@@ -3,9 +3,10 @@ require('./log.js');
 
 const app = require('./app.js');
 
-var server = webserver(app);
+if (global.tnserver) {
+  module.exports = app;
+} else {
+  var server = webserver(app);
 
-module.exports = {
-app: app,
-server: server
-};
+  module.exports = server;
+}
