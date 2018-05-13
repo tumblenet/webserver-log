@@ -1,0 +1,23 @@
+{
+  "name": "webserver-log",
+  "version": "1.0.0",
+  "description": "webserver that logs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tumblenet/webserver-log.git"
+  },
+  "author": "tumble1999",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tumblenet/webserver-log/issues"
+  },
+  "homepage": "https://github.com/tumblenet/webserver-log#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "webserver": "github:tumblenet/webserver"
+  }
+}
