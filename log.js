@@ -11,7 +11,7 @@ if(!global.tnlogger){
   console.log = function (s) {
     //oldLog(s);
 
-    log_file.write(util.format(s) + '\n');
+    log_file.write(util.format(s) + '<br>');
     log_stdout.write(util.format(s) + '\n');
   }
 }
